@@ -5,11 +5,12 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    </PropertyGroup>
-
-    <PropertyGroup>
         <SpaRoot>clientapp\</SpaRoot>
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+        <SpaProxyServerUrl>https://localhost:6363</SpaProxyServerUrl>
+        <SpaProxyLaunchCommand>npm dev</SpaProxyLaunchCommand>
     </PropertyGroup>
+    
 
     <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
         <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
