@@ -9,7 +9,7 @@ builder.Services.AddSpaStaticFiles(configuration => {
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/health", () => "alive");
 
 var spaPath = "/app";
 if (app.Environment.IsDevelopment())

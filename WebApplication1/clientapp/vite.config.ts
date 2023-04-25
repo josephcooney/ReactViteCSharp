@@ -7,7 +7,10 @@ export default defineConfig({
   base: '/app',
   server: {
     https: true,
-    port: 6363
+    port: 6363,
+    proxy: {
+      '/health' : 'http://localhost:5290'
+    }
   },
   plugins: [react(), mkcert()],
 })
